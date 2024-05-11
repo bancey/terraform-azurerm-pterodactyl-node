@@ -128,8 +128,8 @@ variable "vm_shutdown_schedule" {
 variable "certificate_config" {
   description = "Configuration for the certificate to use for the VM."
   type = object({
-    domain_name = string
-    email       = string
+    domain_name = optional(string, "")
+    email       = optional(string, "")
   })
   default = {}
 }
