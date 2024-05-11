@@ -125,10 +125,13 @@ variable "vm_shutdown_schedule" {
   }
 }
 
-variable "vm_domain_name" {
-  description = "The domain name to use for the VM, if specified the VM will attempt to generate SSL certificates using certbot."
-  type        = string
-  default     = null
+variable "certificate_config" {
+  description = "Configuration for the certificate to use for the VM."
+  type = object({
+    domain_name = string
+    email       = string
+  })
+  default = {}
 }
 
 variable "enable_aad_login" {
