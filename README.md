@@ -1,6 +1,6 @@
 # terraform-module-pterodactyl-node
 
-This module deploys a VM to Azure with a number of different options, and bootstraps it to work as a [Pterodactly Wings node](https://pterodactyl.io/).
+This module deploys a VM to Azure with a number of different options, and bootstraps it to work as a [Pterodactyl Wings node](https://pterodactyl.io/).
 
 ## Getting Started
 
