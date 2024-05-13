@@ -23,3 +23,8 @@ output "username_secret_id" {
   description = "The reference to the username in the keyvault, if a username was NOT provided"
   value       = var.admin_username == null ? azurerm_key_vault_secret.username[0].id : null
 }
+
+output "vm_id" {
+  description = "The Resource ID of VM."
+  value       = azurerm_linux_virtual_machine.this.id
+}
