@@ -28,3 +28,8 @@ output "vm_id" {
   description = "The Resource ID of VM."
   value       = azurerm_linux_virtual_machine.this.id
 }
+
+output "identity" {
+  description = "The identity of the VM, if enabled"
+  value       = var.enable_aad_login ? azurerm_linux_virtual_machine.this.identity : null
+}
