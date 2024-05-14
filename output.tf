@@ -29,7 +29,12 @@ output "vm_id" {
   value       = azurerm_linux_virtual_machine.this.id
 }
 
-output "identity" {
-  description = "The identity of the VM, if enabled"
-  value       = var.enable_aad_login ? azurerm_linux_virtual_machine.this.identity : null
+output "vm_identity_principal_id" {
+  description = "The principal_id of the VM, if enabled"
+  value       = var.enable_aad_login ? azurerm_linux_virtual_machine.this.identity.principal_id : null
+}
+
+output "vm_identity_tenant_id" {
+  description = "The principal_id of the VM, if enabled"
+  value       = var.enable_aad_login ? azurerm_linux_virtual_machine.this.identity.tenant_id : null
 }
